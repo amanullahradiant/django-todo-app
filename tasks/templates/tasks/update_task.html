@@ -6,7 +6,7 @@
     <title>Update Task</title>
   </head>
   <body>
-    <form method="POST" action="">
+    <form method="POST" action=""> {% comment %} if you keep the action blank you'll hit the same function updateTask in this case  {% endcomment %}
       {% csrf_token %}
       {{ form }}
       <input type="submit" name="Update Task" />

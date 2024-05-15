@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Task</title>
+</head>
+<body>
+    <p>Are you sure about deleting {{item}} ?</p>
+
+    <a href="{% url 'list' %}">Cancel</a>
+
+    <form action="" method="POST"> {% comment %} if you keep the action blank you'll hit the same function deleteTask in this case  {% endcomment %}
+        {% csrf_token %}
+        <button type="submit" name="Confirm Delete">Delete</button>
+    </form>
+</body>
+</html>
